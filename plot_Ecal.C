@@ -15,7 +15,7 @@ void plot_Ecal() {
 
     TCanvas *c1 = new TCanvas("c1", "Energy Histogram", 1000, 800);
 
-    events->Draw("Sum$(EcalEndcapNHits.energy) >> htemp(66, 9.6, 9.9)");
+    events->Draw("Sum$(EcalEndcapNHits.energy) >> htemp(22, 9.6, 9.9)");
 
     TH1F *htemp = (TH1F*)gDirectory->Get("htemp");
     htemp->SetTitle("Energy deposited in the Ecal by 10 GeV e-;Energy (GeV);Counts");
